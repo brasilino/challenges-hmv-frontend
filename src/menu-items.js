@@ -16,6 +16,28 @@ export default {
             ]
         },
         {
+            id: 'convenios',
+            title: 'Convênios',
+            type: 'group',
+            icon: 'icon-ui',
+            children: [
+                {
+                    id: 'basic',
+                    title: 'Convênio',
+                    type: 'collapse',
+                    icon: 'feather icon-box',
+                    children: [
+                        {
+                            id: 'cadastrar',
+                            title: 'Cadastrar',
+                            type: 'item',
+                            url: '/health-plan/register'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             id: 'ui-element',
             title: 'UI ELEMENT',
             type: 'group',

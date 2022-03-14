@@ -16,15 +16,13 @@ const UIBasicTabsPills = React.lazy(() => import('./Demo/UIElements/Basic/TabsPi
 const UIBasicBasicTypography = React.lazy(() => import('./Demo/UIElements/Basic/Typography'));
 
 const FormsElements = React.lazy(() => import('./Demo/Forms/FormsElements'));
-
 const BootstrapTable = React.lazy(() => import('./Demo/Tables/BootstrapTable'));
-
 const Nvd3Chart = React.lazy(() => import('./Demo/Charts/Nvd3Chart/index'));
-
 const GoogleMap = React.lazy(() => import('./Demo/Maps/GoogleMap/index'));
-
 const OtherSamplePage = React.lazy(() => import('./Demo/Other/SamplePage'));
 const OtherDocs = React.lazy(() => import('./Demo/Other/Docs'));
+
+const HealthPlanRegister = React.lazy(() => import('./Pages/HealthPlan/Register'));
 
 const routes = [
     { path: '/dashboard/default', exact: true, name: 'Default', component: DashboardDefault },
@@ -40,6 +38,7 @@ const routes = [
     { path: '/maps/google-map', exact: true, name: 'Google Map', component: GoogleMap },
     { path: '/sample-page', exact: true, name: 'Sample Page', component: OtherSamplePage },
     { path: '/docs', exact: true, name: 'Documentation', component: OtherDocs },
+    { path: '/health-plan/register', exact: true, name: 'Health Plan Register', component: HealthPlanRegister },
 ];
 
 export default routes;
