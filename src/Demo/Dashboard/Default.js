@@ -8,42 +8,8 @@ import avatar1 from '../../assets/images/user/avatar-1.jpg';
 import avatar2 from '../../assets/images/user/avatar-2.jpg';
 import avatar3 from '../../assets/images/user/avatar-3.jpg';
 
-import {
-    ApolloClient,
-    InMemoryCache,
-    gql
-  } from "@apollo/client";
 
 class Dashboard extends Component {
-    constructor() {
-        super();
-        this.state = { data: [] };
-    }
-
-    async componentDidMount() {
-        const client = new ApolloClient({
-            uri: 'http://localhost:4000',
-            cache: new InMemoryCache()
-        });
-
-        const result = await client.query({
-        query: gql`
-            query {
-                login(user: "teste") {
-                    Name
-                    Token
-                }
-            }
-        `
-        })
-
-        console.log('test:', result)
-
-        const { data: { login } } = result
-        
-        this.setState({ data: login });
-    }
-
     render() {
         const tabContent = (
             <Aux>
@@ -110,7 +76,7 @@ class Dashboard extends Component {
                     <Col md={6} xl={4}>
                         <Card>
                             <Card.Body>
-                                <h6 className='mb-4'>Daily Sales | {this.state.data.Name} | {this.state.data.Token}</h6>
+                                <h6 className='mb-4'>Daily Sales</h6>
                                 <div className="row d-flex align-items-center">
                                     <div className="col-9">
                                         <h3 className="f-w-300 d-flex align-items-center m-b-0"><i className="feather icon-arrow-up text-c-green f-30 m-r-5"/> $249.95</h3>

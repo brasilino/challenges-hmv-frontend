@@ -23,6 +23,7 @@ const OtherSamplePage = React.lazy(() => import('./Demo/Other/SamplePage'));
 const OtherDocs = React.lazy(() => import('./Demo/Other/Docs'));
 
 const HealthPlanRegister = React.lazy(() => import('./Pages/HealthPlan/Register'));
+const HealthPlanConsult = React.lazy(() => import('./Pages/HealthPlan/Consult'));
 
 const routes = [
     { path: '/dashboard/default', exact: true, name: 'Default', component: DashboardDefault },
@@ -39,6 +40,7 @@ const routes = [
     { path: '/sample-page', exact: true, name: 'Sample Page', component: OtherSamplePage },
     { path: '/docs', exact: true, name: 'Documentation', component: OtherDocs },
     { path: '/health-plan/register', exact: true, name: 'Health Plan Register', component: HealthPlanRegister },
+    { path: '/health-plan/consult', exact: true, name: 'Health Plan Consult', component: HealthPlanConsult },
 ];
 
 export default routes;
