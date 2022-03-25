@@ -52,6 +52,12 @@ export default {
                             title: 'Cadastrar',
                             type: 'item',
                             url: '/Specialties/register'
+                        },
+                        {
+                            id: 'consultar',
+                            title: 'Consultar',
+                            type: 'item',
+                            url: '/Specialties/Consult'
                         }
                     ]
                 }

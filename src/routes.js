@@ -25,6 +25,7 @@ const OtherDocs = React.lazy(() => import('./Demo/Other/Docs'));
 const HealthPlanRegister = React.lazy(() => import('./Pages/HealthPlan/Register'));
 const HealthPlanConsult = React.lazy(() => import('./Pages/HealthPlan/Consult'));
 const SpecialtiesRegister = React.lazy(() => import('./Pages/Specialties/Register'));
+const SpecialtiesConsult = React.lazy(() => import('./Pages/Specialties/Consult'));
 
 const routes = [
     // { path: '/dashboard/default', exact: true, name: 'Default', component: DashboardDefault },
@@ -43,6 +44,7 @@ const routes = [
     { path: '/health-plan/register', exact: true, name: 'Health Plan Register', component: HealthPlanRegister },
     { path: '/health-plan/consult', exact: true, name: 'Health Plan Consult', component: HealthPlanConsult },
     { path: '/specialties/register', exact: true, name: 'specialties Register', component: SpecialtiesRegister },
+    { path: '/specialties/consult', exact: true, name: 'specialties Consult', component: SpecialtiesConsult },
 ];
 
 export default routes;
