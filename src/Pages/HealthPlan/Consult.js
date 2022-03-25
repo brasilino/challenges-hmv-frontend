@@ -17,7 +17,10 @@ import {
 class HealthPlanConsult extends Component {
     constructor() {
         super();
-        this.state = { healthPlans: [] };
+        this.state = { 
+            items: [],
+            healthPlans: [],
+        };
         Moment.locale('pt-br');
     }
 
@@ -50,13 +53,36 @@ class HealthPlanConsult extends Component {
         this.setState({ healthPlans: content });
     }
 
+    async deleteHealthPlan(id) {
+        const result = await this.client.mutate({
+            mutation: gql`
+                mutation {
+                    deleteHealthPlan(id: "${id}") {
+                        status
+                    }
+                }
+            `
+        })
+
+        console.log('test:', result)
+
+        const { data: { deleteHealthPlan: { status } } } = result
+        
+        alert('deleteHealthPlan status:', status)
+
+        if(status) {
+            const healthPlans = this.state.healthPlans.filter(item => item.id !== id)
+            this.setState({ healthPlans })
+        }
+    }
+
     render() {
 
         console.log('healthPlans:', this.state.healthPlans)
 
         const { healthPlans } = this.state
 
-        const itens = healthPlans.map(item => (
+        const items = healthPlans.map(item => (
             <tr key={item.id} className="unread">
                 <td><img className="rounded-circle" style={{width: '40px'}} src={imgHealthPlan} alt="activity-user"/></td>
                 <td>
@@ -67,7 +93,7 @@ class HealthPlanConsult extends Component {
                     <h6 className="mb-1">Última atualização</h6>
                     <h6 className="text-muted"><i className="fa fa-circle text-c-green f-10 m-r-15"/>{Moment(item.dataAtualizacao).format('DD/MM/YYYY')}</h6>
                 </td>
-                <td><a href={DEMO.BLANK_LINK} className="label theme-bg2 text-white f-12">Editar</a><a href="#" className="label theme-bg text-white f-12">Deletar</a></td>
+                <td><a href={DEMO.BLANK_LINK} className="label theme-bg2 text-white f-12">Editar</a><a href="#" onClick={() => this.deleteHealthPlan(item.id)} className="label theme-bg text-white f-12">Deletar</a></td>
             </tr>
         ))
 
@@ -82,7 +108,7 @@ class HealthPlanConsult extends Component {
                             <Card.Body className='px-0 py-2'>
                                 <Table responsive hover>
                                     <tbody>
-                                        {itens}
+                                        {items}
                                     </tbody>
                                 </Table>
                             </Card.Body>
