@@ -53,11 +53,11 @@ class SpecialtiesConsult extends Component {
         this.setState({ specialties: content });
     }
 
-    async deleteHealthPlan(id) {
+    async deleteSpecialtie(id) {
         const result = await this.client.mutate({
             mutation: gql`
                 mutation {
-                    deleteHealthPlan(id: "${id}") {
+                    deleteSpecialtie(id: "${id}") {
                         status
                     }
                 }
@@ -66,9 +66,9 @@ class SpecialtiesConsult extends Component {
 
         console.log('test:', result)
 
-        const { data: { deleteHealthPlan: { status } } } = result
+        const { data: { deleteSpecialtie: { status } } } = result
         
-        alert('deleteHealthPlan status:', status)
+        alert('deleteSpecialtie status:', status)
 
         if(status) {
             const specialties = this.state.specialties.filter(item => item.id !== id)
@@ -93,7 +93,7 @@ class SpecialtiesConsult extends Component {
                     <h6 className="mb-1">Última atualização</h6>
                     <h6 className="text-muted"><i className="fa fa-circle text-c-green f-10 m-r-15"/>{Moment(item.dataAtualizacao).format('DD/MM/YYYY')}</h6>
                 </td>
-                <td><a href={DEMO.BLANK_LINK} className="label theme-bg2 text-white f-12">Editar</a><a href="#" onClick={() => this.deleteHealthPlan(item.id)} className="label theme-bg text-white f-12">Deletar</a></td>
+                <td><a href={DEMO.BLANK_LINK} className="label theme-bg2 text-white f-12">Editar</a><a href="#" onClick={() => this.deleteSpecialtie(item.id)} className="label theme-bg text-white f-12">Deletar</a></td>
             </tr>
         ))
 
