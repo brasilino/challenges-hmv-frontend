@@ -40,6 +40,20 @@ export default {
                             url: '/health-plan/Consult'
                         }
                     ]
+                },
+                {
+                    id: 'specialties',
+                    title: 'Especialidades',
+                    type: 'collapse',
+                    icon: 'feather icon-box',
+                    children: [
+                        {
+                            id: 'cadastrar',
+                            title: 'Cadastrar',
+                            type: 'item',
+                            url: '/Specialties/register'
+                        }
+                    ]
                 }
             ]
         },
