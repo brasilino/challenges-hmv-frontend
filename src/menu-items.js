@@ -61,6 +61,21 @@ export default {
                         }
                     ]
                 }
+                ,
+                {
+                    id: 'hospitals',
+                    title: 'Hospitais',
+                    type: 'collapse',
+                    icon: 'feather icon-box',
+                    children: [
+                        {
+                            id: 'cadastrar',
+                            title: 'Cadastrar',
+                            type: 'item',
+                            url: '/Hospitals/register'
+                        }
+                    ]
+                }
             ]
         },
         
@@ -116,28 +131,28 @@ export default {
         //         }
         //     ]
         // },
-        // {
-        //     id: 'ui-forms',
-        //     title: 'Forms & Tables',
-        //     type: 'group',
-        //     icon: 'icon-group',
-        //     children: [
-        //         {
-        //             id: 'form-basic',
-        //             title: 'Form Elements',
-        //             type: 'item',
-        //             url: '/forms/form-basic',
-        //             icon: 'feather icon-file-text'
-        //         },
-        //         {
-        //             id: 'bootstrap',
-        //             title: 'Table',
-        //             type: 'item',
-        //             icon: 'feather icon-server',
-        //             url: '/tables/bootstrap'
-        //         }
-        //     ]
-        // },
+        {
+            id: 'ui-forms',
+            title: 'Forms & Tables',
+            type: 'group',
+            icon: 'icon-group',
+            children: [
+                {
+                    id: 'form-basic',
+                    title: 'Form Elements',
+                    type: 'item',
+                    url: '/forms/form-basic',
+                    icon: 'feather icon-file-text'
+                },
+                {
+                    id: 'bootstrap',
+                    title: 'Table',
+                    type: 'item',
+                    icon: 'feather icon-server',
+                    url: '/tables/bootstrap'
+                }
+            ]
+        },
         // {
         //     id: 'chart-maps',
         //     title: 'Chart & Maps',
