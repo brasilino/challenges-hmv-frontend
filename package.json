@@ -1,8 +1,8 @@
 {
-  "name": "datta-able-rv18.0.4",
+  "name": "challenges-hmv",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://lite.codedthemes.com/datta-able/react/default/",
+  "homepage": "http://challenges-hmv.com",
   "dependencies": {
     "@apollo/client": "^3.3.21",
     "@types/react": "^17.0.39",

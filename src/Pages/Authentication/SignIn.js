@@ -7,9 +7,6 @@ import Breadcrumb from "../../App/layout/AdminLayout/Breadcrumb";
 
 class SignIn extends React.Component {
     render () {
-
-        // href="/datta-able/react/default/auth/signin"
-
         return(
             <Aux>
                 <Breadcrumb/>
@@ -40,7 +37,7 @@ class SignIn extends React.Component {
                                     </div>
                                 </div>
 
-                                <NavLink to="/datta-able/react/default/auth/signin">
+                                <NavLink to="/dashboard/default">
                                     <button className="btn btn-primary shadow-2 mb-4">Login</button>
                                 </NavLink>
                                 <p className="mb-2 text-muted">Esqueceu a senha? <NavLink to="/auth/reset-password-1">Redefinir</NavLink></p>
