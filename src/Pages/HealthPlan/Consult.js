@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Row, Col, Card, Table, Tabs, Tab} from 'react-bootstrap';
+import {Row, Col, Card, Table} from 'react-bootstrap';
 import Moment from 'moment';
 
 import Aux from "../../hoc/_Aux";
