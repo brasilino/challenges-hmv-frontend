@@ -22,6 +22,7 @@ global.jQuery = $;
 // const OtherSamplePage = React.lazy(() => import('./Demo/Other/SamplePage'));
 // const OtherDocs = React.lazy(() => import('./Demo/Other/Docs'));
 
+const Dashboard = React.lazy(() => import('./Pages/Dashboard/Default'));
 const HealthPlanRegister = React.lazy(() => import('./Pages/HealthPlan/Register'));
 const HealthPlanConsult = React.lazy(() => import('./Pages/HealthPlan/Consult'));
 const SpecialtiesRegister = React.lazy(() => import('./Pages/Specialties/Register'));
@@ -42,6 +43,7 @@ const routes = [
     // { path: '/maps/google-map', exact: true, name: 'Google Map', component: GoogleMap },
     // { path: '/sample-page', exact: true, name: 'Sample Page', component: OtherSamplePage },
     // { path: '/docs', exact: true, name: 'Documentation', component: OtherDocs },
+    { path: '/dashboard/default', exact: true, name: 'Default', component: Dashboard },
     { path: '/health-plan/register', exact: true, name: 'Health Plan Register', component: HealthPlanRegister },
     { path: '/health-plan/consult', exact: true, name: 'Health Plan Consult', component: HealthPlanConsult },
     { path: '/specialties/register', exact: true, name: 'specialties Register', component: SpecialtiesRegister },
