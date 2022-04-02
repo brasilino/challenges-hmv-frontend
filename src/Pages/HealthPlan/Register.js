@@ -38,8 +38,8 @@ class HealthPlanRegister extends React.Component {
                     register(description: "${description}") {
                         id
                         descricao
-                        dataCriacao
-                        dataAtualizacao
+                        data_criacao
+                        data_atualizacao
                         status
                     }
                 }

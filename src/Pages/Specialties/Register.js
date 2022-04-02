@@ -38,8 +38,8 @@ class SpecialtiesRegister extends React.Component {
                     registerSpecialties(name: "${name}") {
                         id
                         nome
-                        dataCriacao
-                        dataAtualizacao
+                        data_criacao
+                        data_atualizacao
                         status
                     }
                 }

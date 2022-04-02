@@ -76,8 +76,8 @@ class HospitalRegister extends React.Component {
                         especialidades {
                             test
                         }
-                        dataCriacao
-                        dataAtualizacao
+                        data_criacao
+                        data_atualizacao
                         codigo_unidade
                         nome_unidade
                         status

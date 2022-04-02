@@ -59,7 +59,7 @@ class Dashboard extends Component {
             if(!status[item.status]) status[item.status] = []
 
             status[item.status].push((
-                <tr key={item.id} className="unread">
+                <tr key={item.codigo_emergencia} className="unread">
                     <td><img className="rounded-circle" style={{width: '40px'}} src={avatar2} alt="activity-user"/></td>
                     <td>
                         <p className="m-0">{item.primeiro_nome_paciente}</p>
@@ -70,7 +70,7 @@ class Dashboard extends Component {
                     <td>
                         <h6 className="text-muted">{item.score_prioridade}</h6>
                     </td>
-                    <td><a href="#" className="label theme-bg text-white f-12">Ver mais</a></td>
+                    <td><a href={'/dashboard/emergency/'+item.codigo_emergencia} className="label theme-bg text-white f-12">Ver mais</a></td>
                 </tr>
             ))
         })
